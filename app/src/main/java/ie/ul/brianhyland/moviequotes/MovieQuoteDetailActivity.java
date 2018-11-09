@@ -83,7 +83,8 @@ public class MovieQuoteDetailActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.action_delete:
-                //TODO delete quote
+                mDocRef.delete();
+                finish();
                 return true;
         }
 
