@@ -1,5 +1,6 @@
 package ie.ul.brianhyland.moviequotes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,8 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class MovieQuoteDetailActivity extends AppCompatActivity {
+
+    private TextView mQuoteTextView;
+    private TextView mMovieTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +22,15 @@ public class MovieQuoteDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_movie_quote_detail);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        mMovieTextView = findViewById(R.id.detail_movie);
+        mQuoteTextView = findViewById(R.id.detail_quote);
+
+
+        //Intent receivedIntent = getIntent();
+        String docId = getIntent().getStringExtra(Constants.EXTRA_DOC_ID);
+
+        //temp test
+        mQuoteTextView.setText(docId);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
