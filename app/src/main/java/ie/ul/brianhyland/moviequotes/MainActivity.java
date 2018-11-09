@@ -28,7 +28,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     private int mTempCounter = 0;
-    public static final String TAG = "MQ";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
-        MovieQuoteAdapter movieQuoteAdapter = new MovieQuoteAdapter;
+        MovieQuoteAdapter movieQuoteAdapter = new MovieQuoteAdapter();
         recyclerView.setAdapter(movieQuoteAdapter);
 
         /*temp
