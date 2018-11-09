@@ -15,7 +15,7 @@
 
     <EditText
         android:id="@+id/dialog_movie_edittext"
-        android:hint="Enter a quote here"
+        android:hint="Enter a movie here"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
